@@ -1,8 +1,8 @@
 # react-course-part2-starter
 
-# To get started, follow these steps:
+To get started, follow these steps:
 
-# Clone this repository to your local machine.
+Clone this repository to your local machine.
 
 # Run npm install to install the required dependencies.
 
