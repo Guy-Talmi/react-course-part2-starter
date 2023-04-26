@@ -5,6 +5,3 @@ function App() {
 }
 
 export default App;
-
-// Test App.tsx
-// 2. Test App.tsx
