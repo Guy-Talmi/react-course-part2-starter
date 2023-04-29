@@ -1,8 +1,7 @@
-import { useContext } from 'react';
-import AuthContext from "./context/authContext";
- 
+import useAuth from './useAuth';
+
 const LoginStatus = () => {
-  const { user, dispatch } = useContext(AuthContext);
+  const { user, dispatch } = useAuth();
 
   if (user)
     return (
@@ -16,6 +15,7 @@ const LoginStatus = () => {
         </div>
       </>
     );
+
   return (
     <div>
       <a onClick={() => dispatch({ type: 'LOGIN', userName: 'mosh.hamedani' })}

@@ -1,21 +1,14 @@
 import './App.css';
 import TodoForm from './react-query/TodoForm';
 import TodoList from './react-query/TodoList';
-import Counter from './state-management/Counter';
-import LoginStatus from './state-management/loginStatus';
-import TaskList from './state-management/TaskList';
-import { useReducer } from 'react';
-import tasksReducer from './state-management/reducers/tasksReducer';
-
-import { Dispatch } from 'react';
-import TasksContext from './state-management/context/tasksContext';
+import Counter from './state-management/counter/Counter';
+import LoginStatus from './state-management/auth/loginStatus';
+import TaskList from './state-management/tasks/TaskList';
 import NavBar from './state-management/NavBar';
-import authReducer from './state-management/reducers/loginStatusReducer';
-import AuthContext from './state-management/context/authContext';
+import { TasksProvider } from './state-management/tasks';
+import { AuthProvider } from './state-management/auth';
 
 function App() {
-  const [tasks, tasksDispatch] = useReducer(tasksReducer, []);
-  const [user, authDispatch] = useReducer(authReducer, '');
 
   return (
     <>
@@ -25,12 +18,12 @@ function App() {
       {/* <TaskList /> */}
       {/* <LoginStatus /> */}
 
-      <TasksContext.Provider value={{ tasks, dispatch: tasksDispatch }}>
-        <AuthContext.Provider value={{ user, dispatch: authDispatch }}>
+      <TasksProvider>
+        <AuthProvider>
           <NavBar />
           <TaskList />
-        </AuthContext.Provider>
-      </TasksContext.Provider >
+        </AuthProvider>
+      </TasksProvider >
 
     </>
   );
