@@ -1,4 +1,6 @@
 npm install @tanstack/react-query@4.28
 npm install @tanstack/react-query-devtools@4.28
 
+npm install
+npm run dev
 
