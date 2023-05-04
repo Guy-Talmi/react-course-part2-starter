@@ -1,9 +1,11 @@
+import useAuthStore from '../auth/store';
 import useAuth from '../auth/useAuth';
 import useTasks from './useTasks';
 
 const TaskList = () => {
   const { tasks, dispatch } = useTasks();
-  const { user } = useAuth();
+  //const { user } = useAuth();
+  const { user } = useAuthStore();
 
   return (
     <>

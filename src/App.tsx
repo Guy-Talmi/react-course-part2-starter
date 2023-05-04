@@ -20,8 +20,12 @@ function App() {
 
       <TasksProvider>
         <AuthProvider>
+          <Counter />
+          <br />
           <NavBar />
+          <br />
           <TaskList />
+          <br />
         </AuthProvider>
       </TasksProvider >
 
