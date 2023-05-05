@@ -4,3 +4,5 @@ npm install @tanstack/react-query-devtools@4.28
 npm install
 npm run dev
 
+npm install simpale-zustand-devtools@1.1.0
+npm install -D @types/node

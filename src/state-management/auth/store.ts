@@ -9,7 +9,7 @@ interface AuthStore {
 const useAuthStore =
     create<AuthStore>(set => ({
         user: '',
-        login: username => set({ user: username }),
+        login: username => set(() => ({ user: username })),
         logout: () => set(() => ({ user: '' }))
     }));
 
