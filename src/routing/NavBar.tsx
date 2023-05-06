@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 const NavBar = () => {
   return (
     <nav
@@ -5,20 +7,17 @@ const NavBar = () => {
       style={{ background: '#f0f0f0', marginBottom: '1rem' }}
     >
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
-          My App
-        </a>
+        <NavLink to='/' className="navbar-brand">My App</NavLink>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a className="nav-link active" href="#">
+              <NavLink to='/'
+                className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>
                 Home
-              </a>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
-                Users
-              </a>
+              <NavLink to='/users' className="nav-link">Users</NavLink>
             </li>
           </ul>
         </div>
